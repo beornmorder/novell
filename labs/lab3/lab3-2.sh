@@ -19,12 +19,14 @@ tankCapacity=18
 galGasCost="340"
 fillCost=`expr galGasCost*tankCapacity`
 
-echo -e "MPG \t Total Cost \t Stops \t Gas Left"
-
-if [ ! -f $1 ]; then
-  echo $1 "file does not exist"
+ #first check if exactly one argument is given
+if [ "$#" -ne 1 ]; then #preferrably I'd loop thru each given arg. But I'm lazy.
+  echo $1 "please specify a file"
+elif [ ! -f $1 ]; then #check if argument is file. should work as full path or pwd.
+  echo $1 "does not exist"
 else
-  while read line
+  echo -e "MPG \t Total Cost \t Stops \t Gas Left"
+  while read line #there is no reason to detect EOF. this is more efficent.
   do
       mpg=`echo $line | awk {'print $1'} | grep -o [[:digit:]]*`
       if [ ! -z $mpg ]; then
@@ -35,16 +37,10 @@ else
         distanceCapacity=$((($stopCount+1)*$tankDistance))
         distanceLeft=$(($distanceCapacity-$totalDistance))
         gallonsLeft=$(($distanceLeft/$mpg))
-        #echo -e $mpg "\t" $totalCost "\t" $stopCount
+        #i could have consolidated previous variables, but I prefer this approach
+        #in case the program is re-purposed, it gives more re-usability.
         echo -e $mpg "\t" $totalCost "\t\t" $stopCount "\t" $gallonsLeft
+        #csv or ncurses would be a better way to output data, but again, i'm lazy.
       fi
-      #mpg=`echo $line | awk {'print $1'}`
-      #tank_distance=$((mpg*18))
-      #number_of_stops=$((total_distance/tank_distance))
    done < $1
 fi
-
-
-#STEP TWO: read first value
-
-#THREE:
