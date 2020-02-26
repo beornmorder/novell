@@ -20,7 +20,7 @@ Notes for Instructor
 
    c. It doesn't have an electronic version
 
-   d. Most certificates don't use it a source material.
+   d. Most certificates don't use it as source material.
 
    
 
