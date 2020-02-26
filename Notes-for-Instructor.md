@@ -16,7 +16,7 @@ Notes for Instructor
 
    a. It's out-of-date.
 
-   b. It's massive (5.5 lbs, 1000 pages)
+   b. It's massive (5.5 lbs, 1000 pages). Imagine taking six classes, and carrying around +20lbs of books everyday.
 
    c. It doesn't have an electronic version
 
