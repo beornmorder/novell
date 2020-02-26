@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#INPUT: any data file containing numbers
+#INPUT: any data file containing numbers - will pull first column
 #OUTPUT: stdout, can also be re-directed to file.
 
 #CONSTANTS
