@@ -4,7 +4,7 @@ Notes for Instructor
 
 1. Operating System Choice. While SLES-12 is a widely used operating system in corporate environments, I do not believe it's the best choice for this class. 
 
-   ​	a. It's restrictive licensing prohibits software installation, which slows down progression through the course work.
+   ​	a. It's restrictive licensing prohibits software installation through main channels, which slows down progression through the course work.
 
    ​	b. It does not have any features covered in the coursework which are not available with openSUSE. And, if we stopped using YaST, we could use a distro which may have a shorter learning curve.
 
